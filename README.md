@@ -18,7 +18,7 @@ L'autre avantage, c'est d'avoir une **adresse IPv4 qui change à chaque fois** (
 
 **J'ajoute que le support d'OVH m'a confirmé par écrit que cela n'était pas contraire à leurs conditions d'utilisation (TOS)**. Cependant, pour ne pas se retrouver bloquer (détection Anti-hack), je limite volontairement le scan à un débit de 2500pps, ce qui est largement suffisant.
 
-# Pré-requis du script
+# Prérequis du script
 **Seuls les OS de la famille Debian sont concernés pour le moment.**
 
 **ICMP Echo Reply (ping) et SSH port 22 doivent êtres ouverts depuis le serveur qui lance ce script vers l'Internet.**
@@ -34,7 +34,7 @@ apt update
 apt install python3-openstackclient s-nail screen dnsutils ipcalc netcat
 ```
 
-# Pré-requis OVH
+# Prérequis OVH
 En attendant le guide détaillé, voici les étapes dans les grandes lignes : 
 
 1) Créer un **compte chez OVHcloud** : [OVHcloud link](https://ca.ovh.com/manager/public-cloud "OVHcloud link to create account") (gratuit pour la création)
