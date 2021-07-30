@@ -47,7 +47,7 @@ En attendant le guide détaillé, voici les étapes dans les grandes lignes :
 # Déroulement du script
 Exemple d'un scan complet de "scanme.nmap.org", 2*65535 ports :
 1) Vérification de l'accessibilité du Cloud Public d'OVH
-2) Vérifications des instances OpenStack existantes
+2) Vérification des instances OpenStack existantes
 3) Analyse du ou des fichiers sources (noms d'hôtes et/ou adresses IPv4, format CIDR)
 4) Création de l'instance puis attente de la disponibilité du serveur
 5) Déploiement du scanner MassVulScan + envoi du ou des fichiers hosts
