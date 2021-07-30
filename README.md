@@ -114,4 +114,5 @@ root@HTB:~/osic4MVS# ./osic4MVS.sh -f /tmp/scanme -r /tmp/rc_file -k /tmp/privat
 # A faire
 - Guide pour la partie OVH
 - Ajouter le changelog
+- Traduire le README em anglais
 
