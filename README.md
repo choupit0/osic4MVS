@@ -16,7 +16,7 @@ A ce jour cela ne me coûte que **0.03$ CAD par scan (Data Center BHS3)** (scan 
 
 L'autre avantage, c'est d'avoir une **adresse IPv4 qui change à chaque fois** (pour contourner fail2ban par exemple et tester ses serveurs). Et c'est d'autant plus vrai que l'on peut choisir sa région, ce qui accroit davantage les possibilités.
 
-**J'ajoute que le support m'a confirmé par écrit que cela n'était pas contraire à leurs conditions d'utilisation (TOS)**. Cependant, pour ne pas se retrouver bloquer (détection Anti-hack), je limite volontairement le scan à un débit de 2500pps, ce qui est largement suffisant.
+**J'ajoute que le support d'OVH m'a confirmé par écrit que cela n'était pas contraire à leurs conditions d'utilisation (TOS)**. Cependant, pour ne pas se retrouver bloquer (détection Anti-hack), je limite volontairement le scan à un débit de 2500pps, ce qui est largement suffisant.
 
 # Pré-requis du script
 **Seuls les OS de la famille Debian sont concernés pour le moment.**
