@@ -12,7 +12,7 @@ Script Bash qui permet de déployer et de lancer rapidement le scanner [MassVulS
 
 Avec cette solution on limite et on contrôle les coûts (consommation à la demande).
 
-A ce jour cela me coûte **0.03$ CAD par scan (Data Center BHS3)** (scan de plusieurs hôtes sur tous les ports TCP/UDP). Cela évite ainsi de devoir louer un serveur tous les mois, de le maintenir et de le protéger.
+A ce jour cela ne me coûte que **0.03$ CAD par scan (Data Center BHS3)** (scan de plusieurs hôtes sur tous les ports TCP/UDP). Cela évite ainsi de devoir louer un serveur tous les mois, de le maintenir et de le protéger.
 
 L'autre avantage, c'est d'avoir une **adresse IPv4 qui change à chaque fois** (pour contourner fail2ban par exemple et tester ses serveurs). Et c'est d'autant plus vrai que l'on peut choisir sa région, ce qui accroit davantage les possibilités.
 
