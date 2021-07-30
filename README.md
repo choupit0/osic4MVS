@@ -35,7 +35,7 @@ apt install python3-openstackclient s-nail screen dnsutils ipcalc netcat
 ```
 
 # Prérequis OVH
-En attendant le guide détaillé, voici les étapes dans les grandes lignes : 
+Voici les étapes dans les grandes lignes : 
 
 1) Créer un **compte chez OVHcloud** : [OVHcloud link](https://ca.ovh.com/manager/public-cloud "OVHcloud link to create account") (gratuit pour la création)
 2) Créer un **utilisateur dédié** et récupérer les **variables d'environnement** (fichier OpenStack RC) :
@@ -45,6 +45,8 @@ En attendant le guide détaillé, voici les étapes dans les grandes lignes :
 3) Choisir sa **région**, créer un **jeu de clés SSH**, récupérer votre clé privée et retenir son nom :
 
 -> **Public Cloud / Management Interfaces / Horizon / Key Pairs**
+
+Pour les explications détaillées, rendez-vous sur mon blog : [Déployer un scanner sur OpenStack](https://hack2know.how/2021/07/deployer-un-scanner-sur-openstack-api-ovh "Déployer un scanner sur OpenStack via l'API OVH")
 
 # Déroulement du script
 Exemple d'un scan complet de "scanme.nmap.org", 2*65535 ports :
@@ -114,7 +116,6 @@ root@HTB:~/osic4MVS# ./osic4MVS.sh -f /tmp/scanme -r /tmp/rc_file -k /tmp/privat
 ```
 
 # A faire
-- Guide pour la partie OVH
 - Ajouter le changelog
 - Traduire le README en anglais
 
