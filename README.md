@@ -65,7 +65,7 @@ Exemple d'un scan complet de "scanme.nmap.org", 2*65535 ports :
 
 **Coût chez OVH: 0.03$ CAD**
 
-**Durée du script: ~5 minutes**
+**Durée du script: <5 minutes**
 
 # Suivre le déroulement
 Il est possible de suivre le déroulement du script via une **session screen** (phase d'installation + scan).
