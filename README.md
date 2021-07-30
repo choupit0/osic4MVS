@@ -6,7 +6,7 @@
 # Description
 osic4MVS a.k.a. **O**penStack **I**nstance **C**reation For **M**ass**V**ul**S**can
 
-Script Bash qui permet de déployer et de lancer rapidement le scanner [MassVulScan](https://github.com/choupit0/MassVulScan "MassVulScan: quickly identify your open ports and if they are vulnerable") sur des instances OpenStack du Cloud Public d'OVH.
+Script Bash qui permet de déployer et de lancer rapidement le scanner [MassVulScan](https://github.com/choupit0/MassVulScan "MassVulScan: quickly identify your open ports and if they are vulnerable") depuis des instances OpenStack du Cloud Public d'OVH.
 
 ![Example Menu](screenshots/Menu_1-0.PNG)
 
