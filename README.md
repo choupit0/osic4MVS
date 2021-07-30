@@ -4,13 +4,13 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/choupit0/osic4MVS/graphs/commit-activity)
 [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
 # Description
-osic4MVS a.k.a. **O**penStack **I**nstance **C**reation For **M**ass**V**ul**S**can
+osic4MVS a.k.a. **O**pen**S**tack **I**nstance **C**reation For **M**ass**V**ul**S**can
 
 Script Bash qui permet de déployer et de lancer rapidement le scanner [MassVulScan](https://github.com/choupit0/MassVulScan "MassVulScan: quickly identify your open ports and if they are vulnerable") depuis des instances OpenStack du Cloud Public d'OVH.
 
 ![Example Menu](screenshots/Menu_1-0.PNG)
 
-Avec cette technologie et les serveurs d'OVH, on limite et on contrôle les coûts (consommation à la demande).
+Avec cette solution on limite et on contrôle les coûts (consommation à la demande).
 
 A ce jour **0.03$ CAD par scan** (plusieurs hôtes sur tous les ports TCP/UDP). Cela évite de devoir louer un serveur tous les mois.
 
