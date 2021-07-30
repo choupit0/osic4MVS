@@ -40,7 +40,7 @@ En attendant le guide détaillé, voici les étapes dans les grandes lignes :
 1) Créer un **compte chez OVHcloud** : [OVHcloud link](https://ca.ovh.com/manager/public-cloud "OVHcloud link to create account") (gratuit pour la création)
 2) Créer un **utilisateur dédié** et récupérer les **variables d'environnement** (fichier OpenStack RC) :
 
--> **Public Cloud / Management Interfaces / Users & Roles** (rôle Compute Operator)
+-> **Public Cloud / Project Management / Users & Roles** (rôle Compute Operator)
 
 3) Choisir sa **région**, créer un **jeu de clés SSH**, récupérer votre clé privée et retenir son nom :
 
