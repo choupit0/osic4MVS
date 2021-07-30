@@ -46,7 +46,7 @@ Voici les étapes dans les grandes lignes :
 
 -> **Public Cloud / Management Interfaces / Horizon / Key Pairs**
 
-Pour les explications détaillées, rendez-vous sur mon blog : [Déployer un scanner sur OpenStack](https://hack2know.how/2021/07/deployer-un-scanner-sur-openstack-api-ovh "Déployer un scanner sur OpenStack via l'API OVH")
+**Pour les explications détaillées, rendez-vous sur mon blog : [Déployer un scanner sur OpenStack](https://hack2know.how/2021/07/deployer-un-scanner-sur-openstack-api-ovh "Déployer un scanner sur OpenStack via l'API OVH")**
 
 # Déroulement du script
 Exemple d'un scan complet de "scanme.nmap.org", 2*65535 ports :
