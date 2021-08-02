@@ -88,10 +88,11 @@ auth_user_pass=""					# USER and PASSWORD are specified as part of an URL, they 
 							# And merge them separate by ":", like this:
 							#  --set=mta=smtp[s]://username%40provider.tld:MygreatPassword%21@smtp.provider.tld[:port]
 # If you don't use SMTP authentication, replace below:
-#  --set=mta=smtp[s]://USER:PASSWORD@smtp.provider.tld[:port] BY: --set=mta=smtp[s]://smtp.provider.tld[:port]
-#  --set=smtp-auth=login BY: --set=smtp-auth=none
-# And remove these lines:
-# "--set=smtp-use-starttls" \ and "--set=tls-verify=strict" \
+#  "--set=mta=smtp://${auth_user_pass}@${smtp_server}" \ BY: "--set=mta=smtp://${smtp_server}" \
+#  "--set=smtp-auth=login" \ BY: "--set=smtp-auth=none" \
+# And remove these two lines:
+# "--set=smtp-use-starttls" \
+# "--set=tls-verify=strict" \
 
 # Email part
 email(){
