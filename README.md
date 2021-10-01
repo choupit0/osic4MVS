@@ -101,6 +101,14 @@ chmod +x osic4MVS.sh && chmod +x deploy.sh
 export OS_PASSWORD="**************************"
 ```
 
+**Update 1er Oct. 2021 - Expiration certificat Let's Encrypt** :
+
+Il faut ajouter ceci dans le fichier RC car OVH est affecté par le problème :
+
+```
+export CURL_CA_BUNDLE=""
+```
+
 **Protégez votre fichier RC et votre clé privée SSH, obligatoire pour lancer le script** :
 ```
 chmod 600 [path to private SSH key]
