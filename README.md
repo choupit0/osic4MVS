@@ -107,6 +107,7 @@ Il faut ajouter ceci dans le fichier RC car OVH est affecté par le problème :
 
 ```
 export CURL_CA_BUNDLE=""
+export PYTHONWARNINGS="ignore:Unverified HTTPS request"
 ```
 
 **Protégez votre fichier RC et votre clé privée SSH, obligatoire pour lancer le script** :
