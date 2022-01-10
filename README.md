@@ -97,8 +97,11 @@ chmod +x osic4MVS.sh && chmod +x deploy.sh
 
 **Modifiez le fichier OpenStack RC pour ne pas saisir le mot de passe de l'utilisateur (user-XXXXXXXXXXXXXX)** :
 ```
+# With Keystone you pass the keystone password.
+#echo "Please enter your OpenStack Password: "
+#read -sr OS_PASSWORD_INPUT
 #export OS_PASSWORD=$OS_PASSWORD_INPUT
-export OS_PASSWORD="**************************"
+export OS_PASSWORD="[VOTRE MOT DE PASSE]"
 ```
 
 **Update 1er Oct. 2021 - Expiration certificat Let's Encrypt** :
