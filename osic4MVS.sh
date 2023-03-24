@@ -26,8 +26,8 @@
 #		   They can also be sent automatically by email.
 # Author         : https://github.com/choupit0
 # Site           : https://hack2know.how/
-# Date           : 20210728
-# Version        : 1.0.0
+# Date           : 20230324
+# Version        : 1.0.1
 # Usage          : ./osic4MVS.sh
 # Prerequisites  : python-openstackclient or python3-openstackclient, s-nail (optional), screen, dnsutils, ipcalc, and netcat packages
 #                  Ping and SSH must be allowed from your server to the Internet
@@ -35,7 +35,7 @@
 #                  Dedicated user and environment variables (Public Cloud / Management Interfaces / Users & Roles)
 #                  Dedicated SSH key pair and PEM file (Public Cloud / Management Interfaces / Horizon / Key Pairs)
 
-version="1.0.0"
+version="1.0.1"
 bold_color="\033[1m"
 purple_color="\033[1;35m"
 green_color="\033[0;32m"
@@ -44,16 +44,14 @@ blue_color="\033[0;36m"
 end_color="\033[0m"
 script_start="$SECONDS"
 
+# Script to deploy and launch on the instance
+deploy_script="./deploy.sh"
+
 # Disable CTRL+C
 trap '' SIGINT
 
 # Name server used for the DNS queries/lookups
 dns="1.1.1.1"
-
-# Mandatory variable
-deploy_script="./deploy.sh"
-image="Debian 10"
-flavor="s1-4"
 
 # Instance creation and deployement
 # References:
@@ -506,16 +504,26 @@ fi
 
 xhosts_file="${exclude_file}_parsed"
 
+# Mandatory parameters
+security_group="default"
+image="Debian 10"
+flavor="s1-8"
+network="Ext-Net"
+
+# Dynamic ID to retrieve - mandatory
+#network=d7eaf2f8-d9d8-465b-9244-fd4736660570 #Ext-Net
+
+
 # Instance creation
 echo -n -e "\r                                                                              "
 echo -n -e "${blue_color}\r[-] Waiting for instance creation...${end_color}"
 name="scan_$(date "+%Y-%m-%d_%H%M%S")"
 
-if ! openstack server create --key-name "${pub_key_name}" --image "${image}" --flavor "${flavor}" ${name} --user-data ${deploy_script} &>/dev/null; then
+if ! openstack server create --key-name "${pub_key_name}" --image ${image} --flavor ${flavor} ${name} --user-data ${deploy_script} --network ${network} --security-group ${security_group} 1>/dev/null; then
         echo -e "${red_color}\r[X] ERROR! Thanks to verify your parameters or connectivity. The script is ended.${end_color}"
         exit 1
         else
-                echo -e "${green_color}\r[V] Instance creation done${end_color}                  "
+                echo -e "${green_color}\r[V] Instance creation requested${end_color}                  "
 fi
 
 # Wait for instance to be up and running
