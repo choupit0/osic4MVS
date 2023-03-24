@@ -515,7 +515,7 @@ echo -n -e "\r                                                                  
 echo -n -e "${blue_color}\r[-] Waiting for instance creation...${end_color}"
 name="scan_$(date "+%Y-%m-%d_%H%M%S")"
 
-if ! openstack server create --key-name "${pub_key_name}" --image ${image} --flavor ${flavor} ${name} --user-data ${deploy_script} --network ${network} --security-group ${security_group} 1>/dev/null; then
+if ! openstack server create ${name} --key-name "${pub_key_name}" --image "${image}" --flavor ${flavor} --user-data ${deploy_script} --network ${network} --security-group ${security_group} 1>/dev/null; then
         echo -e "${red_color}\r[X] ERROR! Thanks to verify your parameters or connectivity. The script is ended.${end_color}"
         exit 1
         else
