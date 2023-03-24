@@ -510,10 +510,6 @@ image="Debian 10"
 flavor="s1-8"
 network="Ext-Net"
 
-# Dynamic ID to retrieve - mandatory
-#network=d7eaf2f8-d9d8-465b-9244-fd4736660570 #Ext-Net
-
-
 # Instance creation
 echo -n -e "\r                                                                              "
 echo -n -e "${blue_color}\r[-] Waiting for instance creation...${end_color}"
