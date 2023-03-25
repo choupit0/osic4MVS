@@ -76,7 +76,7 @@ dns="1.1.1.1"
 # When the scan is starting (and to get IPv4 instance), to receive the reports and when the Openstack instance is deleted
 smtp_server="ssl0.ovh.net:587"				# Ex. ssl10.ovh.net:587 or smtp.provider.tld:25
 from_address="scan@ovh.com"				# From/return email address Ex. scan@ovh.com
-recipient=""						# Ex. user@acme.com, use comma "," to add multiple recipients
+recipient=""						# Ex. user@acme.com, use space " " to add multiple recipients
 auth_user_pass=""					# USER and PASSWORD are specified as part of an URL, they MUST be percent-encoded
 							# s-nail offers the urlcodec command which does this for you:
 							# printf 'urlcodec encode username@provider.tld' | s-nail -#
@@ -84,7 +84,8 @@ auth_user_pass=""					# USER and PASSWORD are specified as part of an URL, they 
 							# printf 'urlcodec encode MygreatPassword!' | s-nail -#
 							#  MygreatPassword%21
 							# And merge them separate by ":", like this:
-							#  --set=mta=smtp[s]://username%40provider.tld:MygreatPassword%21@smtp.provider.tld[:port]
+							# username%40provider.tld:MygreatPassword%21
+							# --set=mta=smtp[s]://username%40provider.tld:MygreatPassword%21@smtp.provider.tld[:port]
 # If you don't use SMTP authentication, replace below:
 #  "--set=mta=smtp://${auth_user_pass}@${smtp_server}" \ BY: "--set=mta=smtp://${smtp_server}" \
 #  "--set=smtp-auth=login" \ BY: "--set=smtp-auth=none" \
