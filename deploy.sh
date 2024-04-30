@@ -40,13 +40,13 @@ if [[ $(command -v apt) ]]; then
 	apt upgrade -y > /dev/null 2>&1
 	echo -n -e "\r                                               "
 	echo -n -e "\r[-] Installing the prerequisites packages...     "
-	apt install -y tar gcc make netcat dnsutils git wget net-tools locate xsltproc ipcalc nmap > /dev/null 2>&1
+	apt install -y tar gcc make netcat-openbsd dnsutils git wget net-tools locate xsltproc ipcalc nmap > /dev/null 2>&1
 elif [[ $(command -v apt-get) ]]; then
 	apt-get update > /dev/null 2>&1
 	apt-get upgrade -y > /dev/null 2>&1
 	echo -n -e "\r                                               "
 	echo -n -e "\r[-] Installing the prerequisites packages...     "
-	apt-get install -y tar gcc make netcat dnsutils git wget net-tools locate xsltproc ipcalc nmap > /dev/null 2>&1
+	apt-get install -y tar gcc make netcat-openbsd dnsutils git wget net-tools locate xsltproc ipcalc nmap > /dev/null 2>&1
 fi
 
 # Masscan
@@ -78,7 +78,7 @@ cd /tmp
 git clone https://github.com/choupit0/MassVulScan.git
 cd MassVulScan
 
-sed -i 's/rate="2000"/rate="2500"/g' MassVulScan.sh
+sed -i 's/rate="1500"/rate="1200"/g' MassVulScan.sh
 
 chown -R debian:debian /tmp/MassVulScan/
 
