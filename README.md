@@ -128,7 +128,7 @@ root@HTB:~/osic4MVS# ./osic4MVS.sh -f /tmp/scanme -r /tmp/rc_file -k /tmp/privat
 ```
 
 # A faire
-- Ajouter le changelog
+- ~~Ajouter le changelog~~
 - Traduire le README en anglais
 - Tester d'autres solutions cloud et rendre compatible le scanner
 
