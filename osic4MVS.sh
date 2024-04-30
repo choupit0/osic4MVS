@@ -35,7 +35,7 @@
 #                  Dedicated user and environment variables (Public Cloud / Management Interfaces / Users & Roles)
 #                  Dedicated SSH key pair and PEM file (Public Cloud / Management Interfaces / Horizon / Key Pairs)
 
-version="1.0.1"
+version="1.0.2"
 bold_color="\033[1m"
 purple_color="\033[1;35m"
 green_color="\033[0;32m"
