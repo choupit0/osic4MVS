@@ -29,7 +29,7 @@
 # Date           : 20230324
 # Version        : 1.0.1
 # Usage          : ./osic4MVS.sh
-# Prerequisites  : python-openstackclient or python3-openstackclient, s-nail (optional), screen, dnsutils, ipcalc, and netcat packages
+# Prerequisites  : python-openstackclient or python3-openstackclient, s-nail (optional), screen, dnsutils, ipcalc, and netcat-openbsd packages
 #                  Ping and SSH must be allowed from your server to the Internet
 #                  An OVH account (https://www.ovh.com)
 #                  Dedicated user and environment variables (Public Cloud / Management Interfaces / Users & Roles)
