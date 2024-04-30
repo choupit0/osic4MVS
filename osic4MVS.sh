@@ -534,6 +534,9 @@ while [[ -z ${host} ]]; do
         sleep 0.5
 done
 
+# Removing the old offending RSA key in /root/.ssh/known_hosts
+ssh-keygen -f "/root/.ssh/known_hosts" -R "${host}" > /dev/null 2>&1
+
 # Wait for host to be online
 echo -e "${green_color}\r[V] IPv4 found: ${host}${end_color}                                    "
 
@@ -680,9 +683,6 @@ unset OS_AUTH_URL OS_IDENTITY_API_VERSION OS_PASSWORD OS_PROJECT_DOMAIN_NAME OS_
 
 # Removing the files
 rm -rf hosts_converted.txt IPs.txt IPs_and_hostnames.txt uniq_IP_only.txt multiple_IPs_only.txt IPs_unsorted.txt ${hosts}_parsed ${exclude_file}_parsed 2>/dev/null
-
-# Removing the old offending RSA key in /root/.ssh/known_hosts
-ssh-keygen -f "/root/.ssh/known_hosts" -R "${host}" > /dev/null 2>&1
 
 echo -e "${green_color}\r[V] Instance deleted, bye.${end_color}                                                                                                           "
 time_elapsed
