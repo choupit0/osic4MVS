@@ -134,4 +134,4 @@ root@HTB:~/osic4MVS# ./osic4MVS.sh -f /tmp/scanme -r /tmp/rc_file -k /tmp/privat
 
 # Changelog
 
-[changelog](https://github.com/choupit0/osic4MVS/blob/master/CHANGELOG.md)
+[Changelog](https://github.com/choupit0/osic4MVS/blob/master/CHANGELOG.md)
