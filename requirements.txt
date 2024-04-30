@@ -4,6 +4,6 @@ Debian/Ubuntu OS based installation, with root user:
 
 apt update
 # s-nail package is optional
-apt install -y python-openstackclient s-nail screen dnsutils ipcalc netcat
+apt install -y python-openstackclient s-nail screen dnsutils ipcalc netcat-openbsd
 # for python 3
-apt install -y python3-openstackclient s-nail screen dnsutils ipcalc netcat
+apt install -y python3-openstackclient s-nail screen dnsutils ipcalc netcat-openbsd
