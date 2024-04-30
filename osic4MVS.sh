@@ -558,7 +558,7 @@ done
 echo -e "${green_color}\r[V] SSH port open!${end_color}                                                      "
 
 # SSH command
-ssh_command="ssh -q -i ${priv_key} debian@${host} -o CheckHostIP=no -o StrictHostKeyChecking=no -o ForwardX11=no"
+ssh_command="ssh -q -i ${priv_key} debian@${host} -o HostKeyAlgorithms=+ssh-rsa -o CheckHostIP=no -o StrictHostKeyChecking=no -o ForwardX11=no"
 
 # Hosts file(s) sent on the new instance
 echo -n -e "\r                                                                              "
