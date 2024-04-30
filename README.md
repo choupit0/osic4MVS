@@ -26,12 +26,12 @@ L'autre avantage, c'est d'avoir une **adresse IPv4 qui change à chaque fois** (
 Liste des paquets à installer (compatible python 2.x et python 3.x) :
 ```
 apt update
-apt install python-openstackclient s-nail screen dnsutils ipcalc netcat
+apt install python-openstackclient s-nail screen dnsutils ipcalc netcat-openbsd
 ```
 **Ou:**
 ```
 apt update
-apt install python3-openstackclient s-nail screen dnsutils ipcalc netcat
+apt install python3-openstackclient s-nail screen dnsutils ipcalc netcat-openbsd
 ```
 
 # Prérequis OVH
