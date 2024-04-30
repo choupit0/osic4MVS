@@ -1,5 +1,5 @@
 # osic4MVS :bat: [English version](https://github.com/choupit0/osic4MVS/blob/master/README-EN.md)
-[![Generic badge](https://img.shields.io/badge/Version-1.0.1-<COLOR>.svg)](https://github.com/choupit0/osic4MVS/releases/tag/v1.0.1)
+[![Generic badge](https://img.shields.io/badge/Version-1.0.2-<COLOR>.svg)](https://github.com/choupit0/osic4MVS/releases/tag/v1.0.2)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/choupit0/osic4MVS/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/choupit0/osic4MVS/graphs/commit-activity)
 [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
