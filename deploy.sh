@@ -23,7 +23,7 @@
 # Author         : https://github.com/choupit0
 # Site           : https://hack2know.how/
 # Date           : 20210728
-# Version        : 1.0.0
+# Version        : 1.0.1
 # Usage          : ./osic4MVS.sh
 # Prerequisites  : N/A
 
