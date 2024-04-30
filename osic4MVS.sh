@@ -564,11 +564,11 @@ echo -n -e "${blue_color}\r[-] Sending the hosts file(s) on the new instance...$
 # Send the file(s) to scan
 if [[ -s ${hosts_file} && -s ${xhosts_file} ]]; then
 	${ssh_command} 'mkdir -p /tmp/osic4MVS/hosts && mkdir /tmp/osic4MVS/xhosts && chown -R debian:debian /tmp/osic4MVS/'
-	scp -q -i ${priv_key} -o CheckHostIP=no -o StrictHostKeyChecking=no -o ForwardX11=no ${hosts_file} debian@${host}:/tmp/osic4MVS/hosts/${basename_hosts_file}
-	scp -q -i ${priv_key} -o CheckHostIP=no -o StrictHostKeyChecking=no -o ForwardX11=no ${xhosts_file} debian@${host}:/tmp/osic4MVS/xhosts/${basename_xhosts_file}
+	scp -q -i ${priv_key} -o HostKeyAlgorithms=+ssh-rsa -o CheckHostIP=no -o StrictHostKeyChecking=no -o ForwardX11=no ${hosts_file} debian@${host}:/tmp/osic4MVS/hosts/${basename_hosts_file}
+	scp -q -i ${priv_key} -o HostKeyAlgorithms=+ssh-rsa -o CheckHostIP=no -o StrictHostKeyChecking=no -o ForwardX11=no ${xhosts_file} debian@${host}:/tmp/osic4MVS/xhosts/${basename_xhosts_file}
 else
 	${ssh_command} 'mkdir -p /tmp/osic4MVS/hosts && chown -R debian:debian /tmp/osic4MVS/'
-	scp -q -i ${priv_key} -o CheckHostIP=no -o StrictHostKeyChecking=no -o ForwardX11=no ${hosts_file} debian@${host}:/tmp/osic4MVS/hosts/${basename_hosts_file}
+	scp -q -i ${priv_key} -o HostKeyAlgorithms=+ssh-rsa -o CheckHostIP=no -o StrictHostKeyChecking=no -o ForwardX11=no ${hosts_file} debian@${host}:/tmp/osic4MVS/hosts/${basename_hosts_file}
 fi
 
 if [[ $(${ssh_command} ls /tmp/osic4MVS/hosts | wc -l) -gt "0" ]]; then
@@ -641,7 +641,7 @@ if [[ $(${ssh_command} 'ps -C "MassVulScan.sh" | grep -c "MassVulScan\.sh"') == 
 else
 		# Downloading the reports
 		temp_dir="$(mktemp -d /tmp/temp-XXXXXXXX)"
-		scp -q -i ${priv_key} -o CheckHostIP=no -o StrictHostKeyChecking=no -o ForwardX11=no debian@${host}:/tmp/MassVulScan/reports/* ${temp_dir}/
+		scp -q -i ${priv_key} -o HostKeyAlgorithms=+ssh-rsa -o CheckHostIP=no -o StrictHostKeyChecking=no -o ForwardX11=no debian@${host}:/tmp/MassVulScan/reports/* ${temp_dir}/
                 reports="$(ls ${temp_dir}/)"
 		
 		# Saving reports
@@ -680,6 +680,9 @@ unset OS_AUTH_URL OS_IDENTITY_API_VERSION OS_PASSWORD OS_PROJECT_DOMAIN_NAME OS_
 
 # Removing the files
 rm -rf hosts_converted.txt IPs.txt IPs_and_hostnames.txt uniq_IP_only.txt multiple_IPs_only.txt IPs_unsorted.txt ${hosts}_parsed ${exclude_file}_parsed 2>/dev/null
+
+# Removing the old offending RSA key in /root/.ssh/known_hosts
+ssh-keygen -f "/root/.ssh/known_hosts" -R "${host}" > /dev/null 2>&1
 
 echo -e "${green_color}\r[V] Instance deleted, bye.${end_color}                                                                                                           "
 time_elapsed
