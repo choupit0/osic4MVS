@@ -78,7 +78,7 @@ cd /tmp
 git clone https://github.com/choupit0/MassVulScan.git
 cd MassVulScan
 
-sed -i 's/rate="1500"/rate="1200"/g' MassVulScan.sh
+#sed -i 's/rate="1500"/rate="1200"/g' MassVulScan.sh
 
 chown -R debian:debian /tmp/MassVulScan/
 
