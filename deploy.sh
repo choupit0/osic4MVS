@@ -27,6 +27,8 @@
 # Usage          : ./osic4MVS.sh
 # Prerequisites  : N/A
 
+sudo su
+
 temp_folder="$(mktemp -d /tmp/temp_folder-XXXXXXXX)"
 
 # Installing the prerequisites packages
