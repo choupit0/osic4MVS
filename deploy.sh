@@ -29,8 +29,6 @@
 
 sudo su
 
-temp_folder="$(mktemp -d /tmp/temp_folder-XXXXXXXX)"
-
 # Installing the prerequisites packages
 echo -n -e "\r                                       "
 echo -n -e "\r[-] Updating and upgrading the packages lists..."
