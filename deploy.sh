@@ -27,16 +27,14 @@
 # Usage          : ./osic4MVS.sh
 # Prerequisites  : N/A
 
-sudo su
-
 # Installing the prerequisites packages
 echo -n -e "\r                                       "
 echo -n -e "\r[-] Updating and upgrading the packages lists..."
 
-apt-get update > /dev/null 2>&1
+sudo apt-get update > /dev/null 2>&1
 echo -n -e "\r                                               "
 echo -n -e "\r[-] Installing the prerequisites packages...     "
-apt-get install -y curl gpg git automake > /dev/null 2>&1
+sudo apt-get install -y curl gpg git automake > /dev/null 2>&1
 
 # MassVulScan installation
 echo -n -e "\r                                               "
@@ -44,20 +42,20 @@ echo -n -e "\r[-] Installing MassVulScan...                 "
 cd /tmp
 git clone https://github.com/choupit0/MassVulScan.git
 cd MassVulScan
-./sources/installation.sh -auto-installation
+sudo ./sources/installation.sh -auto-installation
+
+sudo chown -R debian:debian /tmp/MassVulScan/
 
 sed -i 's/rate="1500"/rate="1200"/g' MassVulScan.sh
-
-chown -R debian:debian /tmp/MassVulScan/
 
 # MassVulScan execution
 if [[ -d "/tmp/osic4MVS/hosts" && -d "/tmp/osic4MVS/xhosts" ]]; then
         hosts=$(find /tmp/osic4MVS/hosts -type f -exec basename '{}' \;)
         xhosts=$(find /tmp/osic4MVS/xhosts -type f -exec basename '{}' \;)
-        ./MassVulScan.sh -f /tmp/osic4MVS/hosts/${hosts} -x /tmp/osic4MVS/xhosts/${xhosts} -a -r
+        sudo ./MassVulScan.sh -f /tmp/osic4MVS/hosts/${hosts} -x /tmp/osic4MVS/xhosts/${xhosts} -a -r
 elif [[ -d "/tmp/osic4MVS/hosts" ]]; then
         hosts=$(find /tmp/osic4MVS/hosts -type f -exec basename '{}' \;)
-        ./MassVulScan.sh -f /tmp/osic4MVS/hosts/${hosts} -a -r
+        sudo ./MassVulScan.sh -f /tmp/osic4MVS/hosts/${hosts} -a -r
 else
         echo -n -e "\r[X] ERROR - No hosts files.\n"
 fi
